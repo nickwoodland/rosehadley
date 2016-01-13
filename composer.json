@@ -1,0 +1,24 @@
+{
+  "name" : "nickwoodland/rosehadley",
+  "authors": [
+    {
+      "name":"Nick Woodland",
+      "email" : "nickwoodland@gmail.com"
+    }
+  ],
+  "extra": {
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+    }
+  },
+  "minimum-stability": "dev",
+  "repositories":[
+    {
+      "type":"composer",
+      "url":"http://wpackagist.org"
+    }
+  ],
+  "require": {
+      "wpackagist-plugin/cmb2": "2.1.2"
+  }
+}
