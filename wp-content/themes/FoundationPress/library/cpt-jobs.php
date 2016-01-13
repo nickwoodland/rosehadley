@@ -3,11 +3,11 @@
 function rh_jobs_cpt() {
 
 	$labels = array(
-		'name'                  => _x( 'jobs', 'Post Type General Name', 'text_domain' ),
+		'name'                  => _x( 'Jobs', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'Job', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Jobs', 'text_domain' ),
-		'name_admin_bar'        => __( 'Jobs', 'text_domain' ),
-		'archives'              => __( 'Job Archives', 'text_domain' ),
+		'menu_name'             => __( 'Post Type', 'text_domain' ),
+		'name_admin_bar'        => __( 'Post Type', 'text_domain' ),
+		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
 		'all_items'             => __( 'All Items', 'text_domain' ),
 		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
@@ -34,6 +34,7 @@ function rh_jobs_cpt() {
 		'description'           => __( 'Job post type', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', ),
+		'taxonomies'            => array( 'Job Type' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -47,24 +48,7 @@ function rh_jobs_cpt() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'jobs', $args );
+	register_post_type( 'rh_jobs', $args );
 
 }
 add_action( 'init', 'rh_jobs_cpt', 0 );
-
-function jobs_taxonomy() {
-    register_taxonomy(
-        'job_types',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces).
-        'jobs',        //post type name
-        array(
-            'hierarchical' => true,
-            'label' => 'Job Types',  //Display name
-            'query_var' => true,
-            'rewrite' => array(
-                //'slug' => 'themes', // This controls the base slug that will display before each term
-                'with_front' => true // Don't display the category base before
-            )
-        )
-    );
-}
-add_action( 'init', 'jobs_taxonomy');
