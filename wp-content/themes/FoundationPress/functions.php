@@ -49,5 +49,13 @@ require_once( 'library/sticky-posts.php' );
 // require_once( 'library/protocol-relative-theme-assets.php' );
 require_once( 'library/cpt-jobs.php' );
 
-require_once( 'library/cmbs.php' );
+require_once( 'library/cmbs-general.php' );
+
+require_once( 'library/cmbs-front-page.php' );
+
+require_once( 'library/required-pages.php' );
+
+require_once( 'library/hide-editor.php' );
+
+//require_once( 'library/cmbs-jobs.php' );
 ?>

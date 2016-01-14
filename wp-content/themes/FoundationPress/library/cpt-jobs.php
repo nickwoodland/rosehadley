@@ -45,7 +45,7 @@ function rh_jobs_cpt() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
+		'capability_type'       => 'post',
 		'rewrite' => array('slug' => 'jobs')
 	);
 	register_post_type( 'jobs', $args );
@@ -53,14 +53,14 @@ function rh_jobs_cpt() {
 }
 function jobs_taxonomy() {
     register_taxonomy(
-        'job_types',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces).
+        'job-types',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces).
         'jobs',        //post type name
         array(
-            'hierarchical' => false,
+            'hierarchical' => true,
             'label' => 'Job Types',  //Display name
             'query_var' => true,
             'rewrite' => array(
-                'slug' => 'themes', // This controls the base slug that will display before each term
+                'slug' => 'job-types', // This controls the base slug that will display before each term
             //    'with_front' => true // Don't display the category base before
             )
         )
