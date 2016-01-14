@@ -3,7 +3,7 @@
 function rh_jobs_cpt() {
 
 	$labels = array(
-		'name'                  => _x( 'jobs', 'Post Type General Name', 'text_domain' ),
+		'name'                  => _x( 'Jobs', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'Job', 'Post Type Singular Name', 'text_domain' ),
 		'menu_name'             => __( 'Jobs', 'text_domain' ),
 		'name_admin_bar'        => __( 'Jobs', 'text_domain' ),
@@ -34,7 +34,6 @@ function rh_jobs_cpt() {
 		'description'           => __( 'Job post type', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', ),
-		//'taxonomies'            => array( 'Job Type' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -47,6 +46,7 @@ function rh_jobs_cpt() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'rewrite' => array('slug' => 'jobs')
 	);
 	register_post_type( 'jobs', $args );
 
@@ -56,12 +56,12 @@ function jobs_taxonomy() {
         'job_types',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces).
         'jobs',        //post type name
         array(
-            'hierarchical' => true,
+            'hierarchical' => false,
             'label' => 'Job Types',  //Display name
             'query_var' => true,
             'rewrite' => array(
                 'slug' => 'themes', // This controls the base slug that will display before each term
-                'with_front' => true // Don't display the category base before
+            //    'with_front' => true // Don't display the category base before
             )
         )
     );
