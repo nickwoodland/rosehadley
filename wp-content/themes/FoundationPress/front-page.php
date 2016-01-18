@@ -16,31 +16,51 @@
 
 get_header(); ?>
 
+<?php include(locate_template('parts/banner.php')); ?>
+
+<?php $lcol = get_post_meta($post->ID, '_rh_fp_col_1', true); ?>
+<?php $rcol = get_post_meta($post->ID, '_rh_fp_col_2', true); ?>
+
 <div id="page" role="main">
 	<article class="main-content">
-	<?php if ( have_posts() ) : ?>
 
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
+		<?php if(the_content()): ?>
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
+			<div class="row">
+				<?php the_content(); ?>
+			</div>
 
-		<?php endif; // End have_posts() check. ?>
+		<?php endif; ?>
 
-		<?php /* Display navigation to next/previous pages when applicable */ ?>
-		<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
-			<nav id="post-nav">
-				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-			</nav>
-		<?php } ?>
+		<div class="row">
+
+			<?php if($rcol && $lcol): ?>
+
+				<div class="columns medium-6">
+					<?php echo apply_filters('the_content', $lcol ); ?>
+				</div>
+
+				<div class="columns medium-6">
+					<?php echo apply_filters('the_content', $rcol ); ?>
+				</div>
+
+			<?php elseif($rcol || $lcol): ?>
+
+				<?php if($rcol): ?>
+					<?php $col_content = $rcol; ?>
+				<?php else: ?>
+					<?php $col_content = $lcol; ?>
+				<?php endif; ?>
+
+				<div class="columns small-12">
+					<?php echo apply_filters('the_content', $col_content ); ?>
+				</div>
+
+			<?php endif; ?>
+
+		</div>
 
 	</article>
-	<?php get_sidebar(); ?>
-
 </div>
 
 <?php get_footer(); ?>

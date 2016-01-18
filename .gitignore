@@ -19,3 +19,7 @@
 
 
 !wp-content/themes/FoundationPress/
+
+!/wp-content/plugins
+/wp-content/plugins/*
+!wp-content/plugins/gravityforms

@@ -1,1 +1,1 @@
-<h1> JOB TYPES </h1>
+<?php include(locate_template('archive-jobs.php')); ?>

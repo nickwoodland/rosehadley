@@ -69,7 +69,7 @@ function page_banner_metaboxes() {
         // 'repeatable'      => true,
     ) );
 
-    $cmb->add_field( array(
+    /* $cmb->add_field( array(
         'name'       => __( 'Banner Image', 'cmb2' ),
         'desc'    => 'Upload an image or enter an URL.',
         'id'         => $prefix . 'banner_image',
@@ -79,7 +79,7 @@ function page_banner_metaboxes() {
         //    'url' => false, // Hide the text input for the url
             'add_upload_file_text' => 'Add Image' // Change upload button text. Default: "Add or Upload File"
         ),
-    ) );
+    ) ); */
 
 
     // Add other metaboxes as needed

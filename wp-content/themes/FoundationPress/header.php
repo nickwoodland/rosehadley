@@ -42,20 +42,39 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-			<div class="top-bar-left show-for-medium">
-				<ul class="menu">
-					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-				</ul>
-			</div>
-			<div class="top-bar-right">
-				<?php foundationpress_primary_menu(); ?>
 
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-					<?php get_template_part( 'parts/mobile-top-bar' ); ?>
-				<?php endif; ?>
+			<div class="row">
+
+				<div class="columns large-4 show-for-medium">
+					<?php foundationpress_primary_menu(); ?>
+				</div>
+
+				<div class="columns large-4 show-for-medium">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				</div>
+
+				<div class="columns large-4">
+					<?php $phone = false; ?>
+					<?php $phone = of_get_option('contact_telephone'); ?>
+						<?php if($phone && "" != $phone ): ?>
+							<?php echo $phone; ?>
+						<?php endif; ?>
+					<?php /* if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
+						<?php get_template_part( 'parts/mobile-top-bar' ); ?>
+					<?php endif; */ ?>
+				</div>
+
 			</div>
+
 		</nav>
 	</header>
+
+	<div class="sub-header">
+		<div class="row">
+			<?php foundationpress_secondary_menu(); ?>
+		</div>
+	</div>
+
 
 	<section class="container">
 		<?php do_action( 'foundationpress_after_header' ); ?>
