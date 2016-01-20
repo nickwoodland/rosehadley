@@ -43,21 +43,26 @@
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 
-			<div class="row">
+			<div class="row" data-equalizer>
 
-				<div class="columns large-4 show-for-medium">
+				<div class="show-for-medium leftcol" data-equalizer-watch>
 					<?php foundationpress_primary_menu(); ?>
 				</div>
 
-				<div class="columns large-4 show-for-medium">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<div class="columns large-6 show-for-medium" data-equalizer-watch>
+					<div class="site-title">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<h1 class="site-title--primary"> Rose Hadley</h1>
+							<h1 class="site-title--secondary"> London</h1>
+						</a>
+					</div>
 				</div>
 
-				<div class="columns large-4">
+				<div class="rightcol" data-equalizer-watch>
 					<?php $phone = false; ?>
 					<?php $phone = of_get_option('contact_telephone'); ?>
 						<?php if($phone && "" != $phone ): ?>
-							<?php echo $phone; ?>
+							<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
 						<?php endif; ?>
 					<?php /* if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
 						<?php get_template_part( 'parts/mobile-top-bar' ); ?>

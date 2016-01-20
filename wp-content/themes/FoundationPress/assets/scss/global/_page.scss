@@ -1,0 +1,20 @@
+.site-title{
+    
+    .site-title--primary, .site-title--secondary{
+        text-align:center;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+        line-height: 1em;
+    }
+
+    .site-title--primary{
+        font-size: rem-calc(52px);
+        font-family: 'Times New Roman', serif;
+        color: $white;
+    }
+    .site-title--secondary{
+        font-family: 'Open Sans', sans-serif;
+        font-size:30px;
+        color: $gold;
+    }
+}

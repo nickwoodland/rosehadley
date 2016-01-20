@@ -4,7 +4,7 @@
  * Many pages require a 2col layout.
  * Hiding default editor in favour of 2 column editor CMBs
  */
-add_action( 'admin_head', 'hide_editor' );
+/*add_action( 'admin_head', 'hide_editor' );
 function hide_editor() {
     global $pagenow;
     if( !( 'post.php' == $pagenow ) ) return;
@@ -30,4 +30,11 @@ function hide_editor() {
             remove_post_type_support('page', 'editor');
         }
     endforeach;
+}*/
+
+add_action( 'admin_head', 'hide_editor' );
+function hide_editor() {
+
+    remove_post_type_support('page', 'editor');
+
 }

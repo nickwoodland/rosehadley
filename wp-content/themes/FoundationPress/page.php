@@ -1,45 +1,66 @@
 <?php
 /**
- * The template for displaying pages
+ * The main template file
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that
- * other "pages" on your WordPress site will use a different template.
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * e.g., it puts together the home page when no home.php file exists.
+ *
+ * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
  *
  * @package WordPress
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
 
- get_header(); ?>
+get_header(); ?>
 
- <?php get_template_part( 'parts/featured-image' ); ?>
+<?php include(locate_template('parts/banner.php')); ?>
 
- <div id="page" role="main">
+<?php $lcol = get_post_meta($post->ID, '_rh_page_col_1', true); ?>
+<?php $rcol = get_post_meta($post->ID, '_rh_page_col_2', true); ?>
 
- <?php do_action( 'foundationpress_before_content' ); ?>
- <?php while ( have_posts() ) : the_post(); ?>
-   <article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
-       <header>
-           <h1 class="entry-title"><?php the_title(); ?></h1>
-       </header>
-       <?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-       <div class="entry-content">
-           <?php the_content(); ?>
-       </div>
-       <footer>
-           <?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
-           <p><?php the_tags(); ?></p>
-       </footer>
-       <?php do_action( 'foundationpress_page_before_comments' ); ?>
-       <?php comments_template(); ?>
-       <?php do_action( 'foundationpress_page_after_comments' ); ?>
-   </article>
- <?php endwhile;?>
+<div id="page-full-width" role="main">
+	<article class="main-content">
 
- <?php do_action( 'foundationpress_after_content' ); ?>
- <?php get_sidebar(); ?>
+		<?php if(the_content()): ?>
 
- </div>
+			<div class="row">
+				<?php the_content(); ?>
+			</div>
 
- <?php get_footer(); ?>
+		<?php endif; ?>
+
+		<div class="row">
+
+			<?php if($rcol && $lcol): ?>
+
+				<div class="columns medium-6">
+					<?php echo apply_filters('the_content', $lcol ); ?>
+				</div>
+
+				<div class="columns medium-6">
+					<?php echo apply_filters('the_content', $rcol ); ?>
+				</div>
+
+			<?php elseif($rcol || $lcol): ?>
+
+				<?php if($rcol): ?>
+					<?php $col_content = $rcol; ?>
+				<?php else: ?>
+					<?php $col_content = $lcol; ?>
+				<?php endif; ?>
+
+				<div class="columns small-12">
+					<?php echo apply_filters('the_content', $col_content ); ?>
+				</div>
+
+			<?php endif; ?>
+
+		</div>
+
+	</article>
+</div>
+
+<?php get_footer(); ?>

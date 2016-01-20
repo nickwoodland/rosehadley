@@ -14,30 +14,39 @@
 <?php $postcode = of_get_option('contact_address_postcode'); ?>
 <?php $email = of_get_option('contact_email'); ?>
 
-<?php if($add1 && "" != $add1): ?>
-    <?php echo $add1; ?>
-<?php endif; ?>
+<div class="footer__contact">
+    <span class="footer__address">
+        Rose Hadley
+        <?php if($add1 && "" != $add1): ?>
+            <?php echo $add1; ?>
+        <?php endif; ?>
 
-<?php if($add2 && "" != $add2): ?>
-    <?php echo $add2; ?>
-<?php endif; ?>
+        <?php if($add2 && "" != $add2): ?>
+            <?php echo $add2; ?>
+        <?php endif; ?>
 
-<?php if($locality && "" != $locality): ?>
-    <?php echo $locality; ?>
-<?php endif; ?>
+        <?php if($locality && "" != $locality): ?>
+            <?php echo $locality; ?>
+        <?php endif; ?>
 
-<?php if($region && "" != $region): ?>
-    <?php echo $region; ?>
-<?php endif; ?>
+        <?php if($region && "" != $region): ?>
+            <?php echo $region; ?>
+        <?php endif; ?>
 
-<?php if($postcode && "" != $postcode): ?>
-    <?php echo $postcode; ?>
-<?php endif; ?>
+        <?php if($postcode && "" != $postcode): ?>
+            <?php echo $postcode; ?>
+        <?php endif; ?>
+    </span>
 
-<?php if($phone && "" != $phone): ?>
-    <?php echo $phone; ?>
-<?php endif; ?>
+    <span class="footer__phone">
+        <?php if($phone && "" != $phone): ?>
+            Phone: <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+        <?php endif; ?>
+    </span>
 
-<?php if($email && "" != $email): ?>
-    <?php echo $email; ?>
-<?php endif; ?>
+    <span class="footer_email">
+        <?php if($email && "" != $email): ?>
+            Email: <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+        <?php endif; ?>
+    </span>
+</div>

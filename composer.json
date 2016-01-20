@@ -20,7 +20,7 @@
   ],
   "require": {
       "wpackagist-plugin/cmb2": "2.1.2",
-      "wpackagist-plugin/options-framework": "1.8.4",
+      "wpackagist-plugin/options-framework": "1.8.5",
       "wpackagist-plugin/duplicate-post": "2.6"
   }
 }

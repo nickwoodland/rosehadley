@@ -51,7 +51,7 @@ require_once( 'library/cpt-jobs.php' );
 
 require_once( 'library/cmbs-general.php' );
 
-require_once( 'library/cmbs-front-page.php' );
+require_once( 'library/cmbs-jobs.php' );
 
 require_once( 'library/required-pages.php' );
 

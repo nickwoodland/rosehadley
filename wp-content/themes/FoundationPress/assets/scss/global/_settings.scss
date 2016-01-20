@@ -44,20 +44,23 @@
 // 1. Global
 // ---------
 
+$rem-base: 14px;
+
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1010);
 $global-lineheight: 1.5;
-$primary-color: #2199e8;
+$primary-color: #509295;
 $secondary-color: #777;
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
+$light-gray: #F4F4F4;
+$medium-gray: #666;
+$dark-gray: #333;
+$black: #000;
 $white: #fefefe;
-$body-background: $white;
+$gold: #e8d367;
+$body-background: $light-gray;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
@@ -86,8 +89,8 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-responsive-gutter: (
-  small: 20px,
-  medium: 30px,
+  small: rem-calc($rem-base),
+  medium: rem-calc($rem-base*2),
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;

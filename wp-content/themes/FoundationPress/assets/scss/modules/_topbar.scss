@@ -1,18 +1,40 @@
 .top-bar {
 
+    padding-top:rem-calc($rem-base);
+    padding-bottom: rem-calc($rem-base);
+
+    .leftcol, .rightcol{
+        @include grid-column(3);
+        position:relative;
+    }
+
+    .leftcol{
+        ul{
+            position: absolute;
+            bottom:0px;
+        }
+    }
+
+    .rightcol{
+        a{
+            font-size: rem-calc(20px);
+            position:absolute;
+            bottom:0px;
+            right:0px;
+        }
+    }
+
   .menu .home a {
     font-size: 1rem;
     color: #B9B9B9;
   }
 
   .menu a {
-    height: 45px;
-    line-height: 45px;
     color: #e6e6e6;
     padding-top: 0;
     padding-bottom: 0;
-    font-weight: bold;
-    font-size: 0.8rem;
+    font-weight: 400;
+    font-size: rem-calc(15px);
 
     &:hover:not(.button) {
       background-color: #2a2a2a;
@@ -20,7 +42,7 @@
   }
 
   .menu>li:not(.menu-text)>a {
-    padding: 1rem;
+    padding: 0.3rem;
   }
 
   .menu li:not(:last-child) {
