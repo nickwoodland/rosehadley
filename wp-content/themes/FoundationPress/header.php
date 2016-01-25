@@ -72,14 +72,14 @@
 			</div>
 
 		</nav>
-	</header>
 
-	<div class="sub-header">
-		<div class="row">
-			<?php foundationpress_secondary_menu(); ?>
+		<div class="sub-header">
+			<div class="row sub-navigation">
+				<?php foundationpress_secondary_menu(); ?>
+			</div>
 		</div>
-	</div>
 
+	</header>
 
 	<section class="container">
 		<?php do_action( 'foundationpress_after_header' ); ?>

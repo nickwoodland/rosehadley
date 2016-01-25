@@ -1,5 +1,5 @@
 .site-title{
-    
+
     .site-title--primary, .site-title--secondary{
         text-align:center;
         text-transform: uppercase;
@@ -17,4 +17,23 @@
         font-size:30px;
         color: $gold;
     }
+}
+
+.sub-navigation{
+    font-size:rem-calc(15px);
+    padding: rem-calc(18px) 0;
+
+    .menu > li:not(.menu-text) > a {
+        color:black;
+        padding: 0 rem-calc($rem-base);
+    }
+
+    li{
+        text-align: center;
+    }
+}
+
+.main-content__columns{
+    @include grid-row();
+    margin:rem-calc(20px) 0px;
 }

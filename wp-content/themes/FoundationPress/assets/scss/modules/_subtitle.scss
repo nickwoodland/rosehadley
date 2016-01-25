@@ -1,0 +1,22 @@
+.main-content__subtitle{
+
+    position:relative;
+    padding: rem-calc(16px) 0px;
+    border-bottom:1px solid black;
+
+    h2{
+        font-size:rem-calc(24px);
+        margin-bottom:0px;
+        text-align: center;
+        color: $primary-color;
+    }
+
+    &::after{
+        position:absolute;
+        width:100%;
+        text-align: center;
+        bottom:rem-calc(-12px);
+        content: url("../images/circle.png");
+    }
+
+}

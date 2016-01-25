@@ -1,11 +1,6 @@
 <?php
-/* Code for custom metaboxes.
-Requires CMB2, as managed by composer.
-*/
-add_action( 'cmb2_admin_init', 'page_banner_metaboxes' );
-/**
- * Define the metabox and field configurations.
- */
+
+/* banner metaboxes */
 function page_banner_metaboxes() {
 
     // Start with an underscore to hide fields from custom fields list
@@ -68,15 +63,50 @@ function page_banner_metaboxes() {
         // 'on_front'        => false, // Optionally designate a field to wp-admin only
         // 'repeatable'      => true,
     ) );
+
+    // Regular text field
+    $cmb->add_field( array(
+        'name'       => __( 'Banner Text Colour', 'cmb2' ),
+        'id'         => $prefix . 'banner_colour',
+        'type'             => 'select',
+        'options'          => array(
+            'banner--light'   => __( 'Light', 'cmb2' ),
+            'banner--dark' => __( 'Dark', 'cmb2' ),
+        ),
+
+    ) );
 }
 
-/* Code for custom metaboxes.
-Requires CMB2, as managed by composer.
-*/
-add_action( 'cmb2_admin_init', 'page_content_metaboxes' );
-/**
- * Define the metabox and field configurations.
- */
+/* page subtitle metabox */
+function page_subtitle_metaboxes() {
+
+    // Start with an underscore to hide fields from custom fields list
+    $prefix = '_rh_page_';
+
+    /**
+     * Initiate the metabox
+     */
+    $cmb = new_cmb2_box( array(
+        'id'            => 'subtitle_meta',
+        'title'         => __( 'Subtitle', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    // Regular text field
+    $cmb->add_field( array(
+        'name'       => __( 'Subtitle Text', 'cmb2' ),
+        //'desc'       => __( 'field description (optional)', 'cmb2' ),
+        'id'         => $prefix . 'subtitle',
+        'type'       => 'text',
+    ) );
+}
+
+/* page column metaboxes */
 function page_content_metaboxes() {
 
     // Start with an underscore to hide fields from custom fields list
@@ -123,5 +153,8 @@ function page_content_metaboxes() {
         // 'on_front'        => false, // Optionally designate a field to wp-admin only
         // 'repeatable'      => true,
     ) );
-
 }
+
+add_action( 'cmb2_admin_init', 'page_banner_metaboxes' );
+add_action( 'cmb2_admin_init', 'page_subtitle_metaboxes' );
+add_action( 'cmb2_admin_init', 'page_content_metaboxes' );

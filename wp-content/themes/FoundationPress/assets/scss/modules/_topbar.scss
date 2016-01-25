@@ -1,7 +1,7 @@
 .top-bar {
 
-    padding-top:rem-calc($rem-base);
-    padding-bottom: rem-calc($rem-base);
+    padding-top:rem-calc(20px);
+    padding-bottom: rem-calc(20px);
 
     .leftcol, .rightcol{
         @include grid-column(3);

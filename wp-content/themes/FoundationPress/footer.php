@@ -12,13 +12,13 @@
 ?>
 
 </section>
-<div class="sub-footer">
-
-	<?php get_template_part('parts/footer-social'); ?>
-
-</div>
 
 <div id="footer-container">
+	<div class="sub-footer">
+
+		<?php get_template_part('parts/footer-social'); ?>
+
+	</div>
 	<footer id="footer">
 
 		<?php get_template_part('parts/footer-contact'); ?>

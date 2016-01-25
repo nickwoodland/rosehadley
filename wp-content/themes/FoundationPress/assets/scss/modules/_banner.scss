@@ -1,0 +1,49 @@
+.banner{
+    height:0px;
+    width:100%;
+    padding-bottom:38.5%;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+}
+
+.banner__flex-inner{
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    display:flex;
+}
+
+.banner__content{
+
+    display:inline-block;
+    margin: rem-calc(30px);
+    width: 100%;
+
+    @include breakpoint(medium) {
+        width:40%;
+    }
+
+
+    h1,h2,h3,p{
+        color:$white;
+        line-height:1;
+        margin:0px;
+    }
+
+    &.banner--light{
+        color:$white;
+        h1,h2,h3,p{
+            color:$white;
+        }
+    }
+
+    &.banner--dark{
+        color:$black;
+        h1,h2,h3,p{
+            color:$black;
+        }
+    }
+}

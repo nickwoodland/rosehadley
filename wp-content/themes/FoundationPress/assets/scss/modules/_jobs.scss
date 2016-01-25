@@ -1,0 +1,33 @@
+.job-listing{
+
+    margin-bottom:rem-calc($rem-base*2);
+
+    .job-listing__title{
+        background-color: $primary-color;
+        padding: rem-calc($rem-base/2) rem-calc($rem-base*0.8);
+
+        h3{
+            margin:0px;
+            font-size:rem-calc(18px);
+            font-weight:600;
+            color: $white;
+        }
+    }
+
+
+    .job-listing__inner{
+        background-color: white;
+        padding:rem-calc($rem-base*0.8);
+        position:relative;
+
+        .job-listing__content{
+            margin-bottom:40px+($rem-base*0.8);
+        }
+
+        .job-listing__ctas{
+            position:absolute;
+            bottom:rem-calc($rem-base*0.8);
+        }
+    }
+
+}

@@ -1,6 +1,6 @@
 #page-full-width {
   @include grid-row();
-  margin-top: 3rem;
+  margin-top: 1rem;
 
   .main-content {
     @include breakpoint(small) {

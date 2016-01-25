@@ -1,0 +1,22 @@
+.reveal{
+
+    padding:0px;
+
+    .reveal__header{
+        background-color: $primary-color;
+        color: $white;
+        padding:rem-calc($rem-base);
+
+        h3{
+            margin:0px;
+            line-height: 1;
+        }
+    }
+    .reveal__inner{
+        padding:rem-calc($rem-base);
+    }
+
+    .close-button{
+        color:$white;
+    }
+}

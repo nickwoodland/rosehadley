@@ -1,0 +1,26 @@
+.icon--social{
+
+    margin:0px rem-calc($rem-base);
+
+    span{
+        @extend .hide;
+    }
+
+    .icon--social__inner{
+        display:inline-block;
+        background-color: $black;
+        width:37px;
+        height:37px;
+        border-radius:9999px;
+        position:relative;
+
+        &:hover{
+            background-color: $primary-color;
+        }
+
+        i{
+            vertical-align: -50%;
+            color:$body-background;
+        }
+    }
+}

@@ -109,8 +109,8 @@ function optionsframework_options() {
 
 	// Google+ Company Page
 	$options[] = array(
-		'name' => __('Google+ Company Page', 'options_framework_theme'),
-		'desc' => __('Enter your Google+ Company Page url. Used throughout the website.', 'options_framework_theme'),
+		'name' => __('Google+  Page', 'options_framework_theme'),
+		'desc' => __('Enter your Google+ Page url. Used throughout the website.', 'options_framework_theme'),
 		'id' => 'google_company_page_url',
 		'std' => '',
 		'class' => 'mini',
@@ -118,8 +118,8 @@ function optionsframework_options() {
 
     // Google+ Company Page
 	$options[] = array(
-		'name' => __('Blogger Company Page', 'options_framework_theme'),
-		'desc' => __('Enter your Blogger Company Page url. Used throughout the website.', 'options_framework_theme'),
+		'name' => __('Blogger  Page', 'options_framework_theme'),
+		'desc' => __('Enter your Blogger Page url. Used throughout the website.', 'options_framework_theme'),
 		'id' => 'blogger_company_page_url',
 		'std' => '',
 		'class' => 'mini',

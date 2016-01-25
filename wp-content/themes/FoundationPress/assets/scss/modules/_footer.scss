@@ -2,13 +2,14 @@
 	max-width: 100%;
 	width: 100%;
 	margin: 0 auto;
-	margin-top: rem-calc(60);
-	background-color: $black;
+	margin-top: rem-calc(20);
 	color: $white;
 
 	#footer {
-		@include grid-row();
+
 		padding: rem-calc($rem-base) 0;
+		background-color: $black;
+
 
 		ul {
 			list-style-type: none;
@@ -20,9 +21,10 @@
 }
 
 .footer__contact{
-	max-width:80%;
+	max-width:60%;
 	margin:0px auto;
-	
+	text-align:center;
+
 	.footer__address, .footer__phone{
 		margin-right:rem-calc($rem-base*3);
 	}
@@ -30,4 +32,11 @@
 	a{
 		color:$white;
 	}
+}
+
+
+.sub-footer{
+		@include grid-row();
+		text-align:center;
+		margin-bottom:rem-calc($rem-base);
 }

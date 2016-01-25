@@ -57,5 +57,8 @@ require_once( 'library/required-pages.php' );
 
 require_once( 'library/hide-editor.php' );
 
+require_once( 'library/img-interchange.php' );
+
+
 //require_once( 'library/cmbs-jobs.php' );
 ?>

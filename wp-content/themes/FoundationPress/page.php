@@ -16,13 +16,21 @@
 
 get_header(); ?>
 
-<?php include(locate_template('parts/banner.php')); ?>
-
+<?php $subtitle = get_post_meta($post->ID, '_rh_page_subtitle', true); ?>
 <?php $lcol = get_post_meta($post->ID, '_rh_page_col_1', true); ?>
 <?php $rcol = get_post_meta($post->ID, '_rh_page_col_2', true); ?>
 
 <div id="page-full-width" role="main">
+
+	<?php include(locate_template('parts/banner.php')); ?>
+
 	<article class="main-content">
+
+		<?php if($subtitle): ?>
+			<div class="main-content__subtitle">
+				<h2><?php echo $subtitle; ?></h2>
+			</div>
+		<?php endif; ?>
 
 		<?php if(the_content()): ?>
 
@@ -32,7 +40,7 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		<div class="row">
+		<div class="main-content__columns">
 
 			<?php if($rcol && $lcol): ?>
 
