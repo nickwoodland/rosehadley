@@ -7,6 +7,18 @@
         color: $white;
         padding:rem-calc($rem-base);
 
+        &.reveal__header--1, &.reveal__header--5{
+            background-color: $primary-color;
+        }
+
+        &.reveal__header--2, &.reveal__header--6{
+            background-color: $dark-gray;
+        }
+
+        &.reveal__header--3, &.reveal__header--4{
+            background-color: $medium-gray;
+        }
+
         h3{
             margin:0px;
             line-height: 1;

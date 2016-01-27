@@ -21,20 +21,34 @@ get_header(); ?>
 <?php global $wp_query; ?>
 <div id="page-full-width" role="main">
 	<article class="main-content">
+
+	<div class="row">
+		<div class="columns small-12">
+			<h2 class="archive-title"><?php single_term_title(); ?> JOBS LONDON</h2>
+		</div>
+	</div>
+
 	<?php if ( have_posts() ) : ?>
 
-		<div class="row" data-equalizer>
+		<div class="row large-unstack align-center" data-equalizer>
 
 			<?php $count = 0; ?>
 			<?php $total_count = $wp_query->post_count; ?>
+			<?php $i = 0; ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-	            <div class="columns medium-6 large-4">
-	                <?php get_template_part('parts/job-listing'); ?>
+				<?php $i ++; ?>
+
+				<div class="columns large-4">
+	                <?php include(locate_template('parts/job-listing.php')); ?>
 	            </div>
 
 				<?php $count ++; ?>
+
+				<?php if($i == 6): ?>
+					<?php $i = 0; ?>
+				<?php endif; ?>
 
 				<?php if($count%3==0 && $count != $total_count): ?>
 					</div>

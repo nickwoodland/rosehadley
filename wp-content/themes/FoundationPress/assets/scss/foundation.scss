@@ -21,6 +21,7 @@
 @import 'font-awesome';
 @import 'motion-ui';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+@import url(https://fonts.googleapis.com/css?family=Sanchez);
 
 // Foundation global styles
 @include foundation-global-styles;
@@ -80,6 +81,7 @@
 @import "modules/banner";
 @import "modules/subtitle";
 @import "modules/jobs";
+@import "modules/forms";
 
 
 // Components
@@ -89,6 +91,8 @@
 @import "components/off-canvas";
 @import "components/social-icons";
 @import "components/reveal";
+@import "components/pagination";
+@import "components/mobile-nav";
 
 
 // Templates

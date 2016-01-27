@@ -2,7 +2,7 @@
 
 <article class="job-listing">
 
-    <div class="job-listing__title">
+    <div class="job-listing__title job-listing__title--<?php echo $i; ?>">
         <h3><?php the_title(); ?></h3>
     </div>
 
@@ -24,7 +24,7 @@
                 <a class="button" data-open="js-modal-job-<?php echo $post->ID; ?>">More Info</a>
 
                 <div class="reveal" id="js-modal-job-<?php echo $post->ID; ?>" data-reveal>
-                    <h3 class="reveal__header"><?php the_title(); ?></h3>
+                    <h3 class="reveal__header reveal__header--<?php echo $i; ?>"><?php the_title(); ?></h3>
                     <div class="reveal__inner">
                         <?php the_content(); ?>
                     </div>

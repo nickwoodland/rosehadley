@@ -21,7 +21,10 @@
 
 .sub-navigation{
     font-size:rem-calc(15px);
-    padding: rem-calc(18px) 0;
+    padding-top: rem-calc(18px);
+    border-bottom: 1px solid black;
+    padding-bottom: 12px;
+    margin-bottom:20px;
 
     .menu > li:not(.menu-text) > a {
         color:black;
@@ -30,10 +33,53 @@
 
     li{
         text-align: center;
+
+        a{
+            position:relative;
+
+            &::after{
+                position:absolute;
+                width:100%;
+                text-align: center;
+                left:0px;
+                bottom:rem-calc(-20px);
+                content: url("../images/circle.png");
+            }
+
+            &:hover::after{
+                position:absolute;
+                width:100%;
+                text-align: center;
+                left:0px;
+                bottom:rem-calc(-20px);
+                content: url("../images/circle-full.png");
+            }
+
+        }
+
+        &.active{
+            a::after{
+                    position:absolute;
+                    width:100%;
+                    text-align: center;
+                    left:0px;
+                    bottom:rem-calc(-20px);
+                    content: url("../images/circle-full.png");
+                }
+        }
+
     }
 }
 
 .main-content__columns{
     @include grid-row();
     margin:rem-calc(20px) 0px;
+}
+
+.archive-title{
+    font-size:rem-calc(24px);
+    color: $dark-gray;
+    text-transform:uppercase;
+    margin-bottom:25px;
+    line-height:1;
 }

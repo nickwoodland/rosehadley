@@ -36,6 +36,7 @@
 
 
 <?php wp_footer(); ?>
+<script type="text/javascript">document.getElementsByTagName('body')[0].className+=' js'</script>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
 </body>
 </html>

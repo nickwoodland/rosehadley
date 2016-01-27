@@ -18,7 +18,7 @@
 						<h3><?php echo $banner_subheading; ?></h3>
 					<?php endif; ?>
 					<?php if($banner_text): ?>
-						<p><?php echo $banner_text; ?></p>
+						<p class="banner__text"><?php echo $banner_text; ?></p>
 					<?php endif; ?>
 				</div>
 			<?php endif; ?>

@@ -1,0 +1,49 @@
+.form-wrapper{
+
+    @include grid-column-position(center);
+
+    .form__header{
+        border-bottom:1px solid darken($light-gray, 15%);
+
+        h3,h4{
+            display: inline-block;
+            margin-top:0px;
+            margin-bottom:rem-calc($rem-base);
+        }
+
+        h3{
+            font-size:rem-calc(24px);
+        }
+
+        h4{
+            font-size:rem-calc(16px);
+            margin-left:rem-calc($rem-base/2);
+        }
+    }
+
+    .form__inner{
+        border:1px solid darken($light-gray, 15%);
+        background-color: $white;
+        padding: rem-calc($rem-base*2);
+
+        .gform_wrapper ul li.gfield{
+            input[type="text"],textarea{
+                border:1px solid darken($light-gray, 15%);
+                background-color: $light-gray;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+/*.form-wrapper.form-wrapper--job{
+    .gform_wrapper ul li.gfield{
+        width:47%;
+        display:inline-block;
+        margin-right:rem-calc(15px);
+
+        input,textarea{
+            width:100%;
+        }
+    }
+}*/

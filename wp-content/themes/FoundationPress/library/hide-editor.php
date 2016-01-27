@@ -35,6 +35,16 @@ function hide_editor() {
 add_action( 'admin_head', 'hide_editor' );
 function hide_editor() {
 
-    remove_post_type_support('page', 'editor');
+    global $post;
+    // Get the Post ID.
+    $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+    if( !isset( $post_id ) ) return;
+
+    //$contact = get_page_by_path( 'Contact' )->ID;
+    $contact = false;
+
+    if($post_id != $contact):
+        remove_post_type_support('page', 'editor');
+    endif;
 
 }

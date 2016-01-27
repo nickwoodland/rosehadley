@@ -42,12 +42,12 @@
   }
 
   .menu>li:not(.menu-text)>a {
-    padding: 0.3rem;
+    padding:0.1rem 0.5rem;
   }
 
   .menu li:not(:last-child) {
     @include breakpoint(medium) {
-      border-right: 1px solid #4e4e4e;
+      border-right: 1px solid $white;
     }
   }
 
@@ -73,7 +73,7 @@
 }
 
 .title-bar {
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     display: none;
   }
 
