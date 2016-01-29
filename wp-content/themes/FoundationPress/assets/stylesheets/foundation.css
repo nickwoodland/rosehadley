@@ -6062,16 +6062,18 @@ table.hover tr:nth-of-type(even):hover {
 
 .banner.banner--jobs {
   background-image: url("../images/contactbg.png");
-  padding-bottom: 30%;
   margin-bottom: 1.75rem;
   text-align: center;
   position: relative; }
+  @media screen and (min-width: 48em) {
+    .banner.banner--jobs {
+      height: 0px;
+      padding-bottom: 30%; } }
   .banner.banner--jobs .banner__content {
     width: 90%;
     text-align: center; }
 
 .banner__flex-inner {
-  position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -6088,6 +6090,9 @@ table.hover tr:nth-of-type(even):hover {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  @media screen and (min-width: 48em) {
+    .banner__flex-inner {
+      position: absolute; } }
 
 .banner__content {
   display: inline-block;
@@ -6195,18 +6200,13 @@ table.hover tr:nth-of-type(even):hover {
       border: 1px solid #cecece;
       background-color: #F4F4F4;
       box-shadow: none; }
+  .form-wrapper .gform_wrapper {
+    margin-top: 0px; }
 
-/*.form-wrapper.form-wrapper--job{
-    .gform_wrapper ul li.gfield{
-        width:47%;
-        display:inline-block;
-        margin-right:rem-calc(15px);
+@media screen and (max-width: 63.9375em) {
+  .form-wrapper.form-wrapper--job .gform_wrapper ul li.gfield {
+    width: 100%; } }
 
-        input,textarea{
-            width:100%;
-        }
-    }
-}*/
 .button {
   font-weight: 600; }
 
@@ -6728,16 +6728,42 @@ body.js .mobile-nav {
   @media screen and (min-width: 64em) {
     #single-post {
       margin-top: 1rem; } }
-  #single-post .main-content {
+  #single-post .post.main-content {
+    padding-left: 0.4375rem;
+    padding-right: 0.4375rem;
+    width: 83.33333%;
+    float: left;
+    margin-left: 8.33333%; }
+    @media screen and (min-width: 48em) {
+      #single-post .post.main-content {
+        padding-left: 0.875rem;
+        padding-right: 0.875rem; } }
+    #single-post .post.main-content:last-child:not(:first-child) {
+      float: right; }
+    @media screen and (min-width: 64em) {
+      #single-post .post.main-content {
+        padding-left: 0.4375rem;
+        padding-right: 0.4375rem;
+        width: 66.66667%;
+        float: left;
+        margin-left: 0%; } }
+  @media screen and (min-width: 64em) and (min-width: 48em) {
+    #single-post .post.main-content {
+      padding-left: 0.875rem;
+      padding-right: 0.875rem; } }
+    @media screen and (min-width: 64em) {
+        #single-post .post.main-content:last-child:not(:first-child) {
+          float: right; } }
+  #single-post.single-post--job .main-content {
     padding-left: 0.4375rem;
     padding-right: 0.4375rem;
     width: 100%;
     float: left; }
     @media screen and (min-width: 48em) {
-      #single-post .main-content {
+      #single-post.single-post--job .main-content {
         padding-left: 0.875rem;
         padding-right: 0.875rem; } }
-    #single-post .main-content:last-child:not(:first-child) {
+    #single-post.single-post--job .main-content:last-child:not(:first-child) {
       float: right; }
 
 /*# sourceMappingURL=foundation.css.map */

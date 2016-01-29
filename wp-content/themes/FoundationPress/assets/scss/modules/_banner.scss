@@ -18,10 +18,14 @@
 
 .banner.banner--jobs{
     background-image:url('../images/contactbg.png');
-    padding-bottom:30%;
     margin-bottom:rem-calc($rem-base*2);
     text-align:center;
     position:relative;
+
+    @include breakpoint(medium) {
+        height:0px;
+        padding-bottom:30%;
+    }
 
     .banner__content{
         width:90%;
@@ -30,7 +34,7 @@
 }
 
 .banner__flex-inner{
-    position:absolute;
+
     top:0px;
     left:0px;
     right:0px;
@@ -39,6 +43,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    @include breakpoint(medium) {
+        position:absolute;
+    }
 }
 
 .banner__content{

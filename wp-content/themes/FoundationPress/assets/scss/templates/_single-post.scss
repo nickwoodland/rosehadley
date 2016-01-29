@@ -4,10 +4,26 @@
       margin-top: 1rem;
   }
 
-  .main-content {
-    @include breakpoint(small) {
-      @include grid-column(12);
+
+  .post.main-content {
+        @include breakpoint(small) {
+            @include grid-column(10);
+            @include grid-column-offset(1);
+        }
+        @include breakpoint(large) {
+            @include grid-column(8);
+            @include grid-column-offset(0);
+        }
     }
+
+
+
+  &.single-post--job{
+      .main-content{
+          @include breakpoint(small) {
+              @include grid-column(12);
+          }
+      }
   }
 
 }

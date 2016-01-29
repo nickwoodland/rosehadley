@@ -11,8 +11,8 @@ get_header(); ?>
 
 <?php $connected_form = get_post_meta($post->ID, '_rh_jobs_form_dropdown', true); ?>
 
-<div id="single-post" role="main">
-	<div class="banner banner--jobs" data-equalizer>
+<div id="single-post" class="single-post--job" role="main">
+	<div class="banner banner--jobs" data-equalizer data-equalize-on="medium">
 		<div class="banner__flex-inner" data-equalizer-watch>
 			<div class="banner__content banner--light">
 				<h2>THE HAIR & BEAUTY RECRUITMENT AGENCY</h2>

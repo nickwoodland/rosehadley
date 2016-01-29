@@ -34,16 +34,16 @@
             }
         }
     }
+
+    .gform_wrapper{
+        margin-top:0px;
+    }
 }
 
-/*.form-wrapper.form-wrapper--job{
+.form-wrapper.form-wrapper--job{
     .gform_wrapper ul li.gfield{
-        width:47%;
-        display:inline-block;
-        margin-right:rem-calc(15px);
-
-        input,textarea{
+        @include breakpoint(medium down) {
             width:100%;
         }
     }
-}*/
+}
