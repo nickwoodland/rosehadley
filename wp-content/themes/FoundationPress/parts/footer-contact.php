@@ -7,11 +7,12 @@
 <?php $email = false; ?>
 
 <?php $phone = of_get_option('contact_telephone'); ?>
+<?php $phone2 = of_get_option('secondary_contact_telephone'); ?>
 <?php $add1 = of_get_option('contact_address_street_address_1'); ?>
 <?php $add2 = of_get_option('contact_address_street_address_2'); ?>
 <?php $locality = of_get_option('contact_address_locality'); ?>
 <?php $region = of_get_option('contact_address_region'); ?>
-<?php $postcode = of_get_option('contact_address_postcode'); ?>
+<?php $postcode = of_get_option('contact_address_post_code'); ?>
 <?php $email = of_get_option('contact_email'); ?>
 
 <div class="footer__contact">
@@ -40,7 +41,13 @@
 
     <span class="footer__phone">
         <?php if($phone && "" != $phone): ?>
-            Phone: <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+            Tel 1: <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+        <?php endif; ?>
+        <?php if($phone && "" != $phone && $phone2 && "" != $phone2): ?>
+            <span> | </span>
+        <?php endif; ?>
+        <?php if($phone2 && "" != $phone2): ?>
+            Tel 2: <a href="tel:<?php echo $phone2; ?>"><?php echo $phone2; ?></a>
         <?php endif; ?>
     </span>
 

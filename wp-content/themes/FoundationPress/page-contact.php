@@ -34,7 +34,10 @@ get_header(); ?>
 
 		<div class="main-content__columns">
             <div class="columns medium-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5993586729537!2d-0.1615898840088192!3d51.50221921890252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605390732e639%3A0x83415af6f6f2ea2f!2sRose+Marie+Hadley!5e0!3m2!1sen!2suk!4v1453994511867" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<?php if($lcol): ?>
+					<?php echo apply_filters('the_content', $lcol); ?>
+				<?php endif; ?>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5993586729537!2d-0.1615898840088192!3d51.50221921890252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605390732e639%3A0x83415af6f6f2ea2f!2sRose+Marie+Hadley!5e0!3m2!1sen!2suk!4v1453994511867" width="100%" height="390" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="form-wrapper columns medium-6">
                 <div class="form__inner">
@@ -42,36 +45,6 @@ get_header(); ?>
                 </div>
             </div>
 		</div>
-
-        <?php if($lcol || $rcol): ?>
-    		<div class="main-content__columns">
-
-    			<?php if($rcol && $lcol): ?>
-
-    				<div class="columns medium-6">
-    					<?php echo apply_filters('the_content', $lcol ); ?>
-    				</div>
-
-    				<div class="columns medium-6">
-    					<?php echo apply_filters('the_content', $rcol ); ?>
-    				</div>
-
-    			<?php else: ?>
-
-    				<?php if($rcol): ?>
-    					<?php $col_content = $rcol; ?>
-    				<?php else: ?>
-    					<?php $col_content = $lcol; ?>
-    				<?php endif; ?>
-
-    				<div class="columns small-12">
-    					<?php echo apply_filters('the_content', $col_content ); ?>
-    				</div>
-
-    			<?php endif; ?>
-
-    		</div>
-        <?php endif; ?>
 	</article>
 </div>
 

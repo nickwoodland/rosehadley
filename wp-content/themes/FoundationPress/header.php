@@ -48,9 +48,14 @@
 
 				<div class="show-for-large rightcol" data-equalizer-watch>
 					<?php $phone = false; ?>
+					<?php $sphone = false; ?>
 					<?php $phone = of_get_option('contact_telephone'); ?>
+					<?php $sphone = of_get_option('secondary_contact_telephone'); ?>
 						<?php if($phone && "" != $phone ): ?>
 							<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+						<?php endif; ?>
+						<?php if($sphone && "" != $sphone ): ?>
+							<a href="tel:<?php echo $sphone; ?>"><?php echo $sphone; ?></a>
 						<?php endif; ?>
 					<?php /* if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
 						<?php get_template_part( 'parts/mobile-top-bar' ); ?>

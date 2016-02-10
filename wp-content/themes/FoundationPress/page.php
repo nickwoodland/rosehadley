@@ -19,6 +19,7 @@ get_header(); ?>
 <?php $subtitle = get_post_meta($post->ID, '_rh_page_subtitle', true); ?>
 <?php $lcol = get_post_meta($post->ID, '_rh_page_col_1', true); ?>
 <?php $rcol = get_post_meta($post->ID, '_rh_page_col_2', true); ?>
+<?php $col_fullwidth = get_post_meta($post->ID, '_rh_page_col_fullwidth', true); ?>
 
 <div id="page-full-width" role="main">
 
@@ -64,6 +65,12 @@ get_header(); ?>
 					<?php echo apply_filters('the_content', $col_content ); ?>
 				</div>
 
+			<?php endif; ?>
+
+			<?php if($col_fullwidth): ?>
+				<div class="columns small-12">
+					<?php echo apply_filters('the_content', $col_fullwidth ); ?>
+				</div>
 			<?php endif; ?>
 
 		</div>

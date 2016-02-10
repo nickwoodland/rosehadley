@@ -13,7 +13,7 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
 @import url(https://fonts.googleapis.com/css?family=Sanchez);
 #wpadminbar {
   position: fixed !important; }
@@ -5947,8 +5947,10 @@ table.hover tr:nth-of-type(even):hover {
   .top-bar .rightcol a {
     font-size: 1.25rem;
     position: absolute;
-    bottom: 0px;
+    bottom: 2px;
     right: 0px; }
+  .top-bar .rightcol a:first-child {
+    bottom: 28px; }
   .top-bar .menu .home a {
     font-size: 1rem;
     color: #B9B9B9; }
@@ -5993,7 +5995,8 @@ table.hover tr:nth-of-type(even):hover {
   color: #fefefe; }
   #footer-container #footer {
     padding: 0.875rem 0;
-    background-color: #000; }
+    background-color: #000;
+    font-size: 0.9em; }
     #footer-container #footer ul {
       list-style-type: none;
       margin: 0;
@@ -6100,27 +6103,35 @@ table.hover tr:nth-of-type(even):hover {
   width: auto; }
   @media screen and (min-width: 64em) {
     .banner__content {
-      width: 35%; } }
+      width: 35%;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; } }
   .banner__content h1, .banner__content h2, .banner__content h3, .banner__content p, .banner__content li {
-    font-family: 'Sanchez', serif;
-    line-height: 1;
+    font-family: 'Open Sans', sans-serif;
     margin: 0px; }
-  .banner__content h2 {
+  .banner__content h2, .banner__content h3 {
+    line-height: 0.8; }
+  .banner__content h2, .banner__content .banner__heading--1 {
     font-size: 36px;
-    margin-bottom: 0.75rem; }
-    @media screen and (min-width: 48em) {
-      .banner__content h2 {
-        font-size: 48px; } }
-  .banner__content h3 {
-    font-size: 24px;
+    margin-bottom: 0px;
+    font-weight: 300; }
+  .banner__content h3, .banner__content .banner__heading--2 {
+    font-size: 36px;
     margin-bottom: 0.75rem;
     font-weight: 600; }
-    @media screen and (min-width: 48em) {
-      .banner__content h3 {
-        font-size: 36px; } }
   .banner__content p, .banner__content ul, .banner__content li, .banner__content a {
-    font-size: 15px;
-    line-height: 1.4; }
+    font-size: 18px;
+    line-height: 1.5; }
   .banner__content.banner--light {
     color: #fefefe; }
     .banner__content.banner--light h1, .banner__content.banner--light h2, .banner__content.banner--light h3, .banner__content.banner--light p, .banner__content.banner--light ul, .banner__content.banner--light li {
@@ -6135,7 +6146,7 @@ table.hover tr:nth-of-type(even):hover {
   padding: 1rem 0px;
   border-bottom: 1px solid black; }
   .main-content__subtitle h2 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     margin-bottom: 0px;
     text-align: center;
     color: #509295; }

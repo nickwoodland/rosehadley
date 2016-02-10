@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c0344348ee645587fae1c3a5da21b53e",
-    "content-hash": "ac8baef715acc417200c112ee3e325a3",
+    "hash": "c747693fcaaf028e669ffd1838070a3b",
+    "content-hash": "1cbdd69f6095e0ea45a57b4180844edc",
     "packages": [
         {
             "name": "composer/installers",
@@ -244,6 +244,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/user-role-editor",
+            "version": "4.23.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/user-role-editor/",
+                "reference": "tags/4.23.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.23.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/user-role-editor/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",

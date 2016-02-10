@@ -57,37 +57,40 @@
 
     @include breakpoint(large) {
         width:35%;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
 
     h1,h2,h3,p,li{
-        font-family: 'Sanchez', serif;
-        line-height:1;
+        font-family: 'Open Sans', sans-serif;
         margin:0px;
     }
 
-    h2{
-        font-size:36px;
-        margin-bottom: rem-calc(12px);
-
-        @include breakpoint(medium) {
-            font-size:48px;
-        }
+    h2,h3{
+        line-height:0.8;
     }
 
-    h3{
-        font-size:24px;
+    h2, .banner__heading--1{
+        font-size:36px;
+        //margin-bottom: rem-calc(12px);
+        margin-bottom:0px;
+        font-weight:300;
+    }
+
+    h3, .banner__heading--2{
+        font-size:36px;
         margin-bottom: rem-calc(12px);
         font-weight:600;
-
-        @include breakpoint(medium) {
-            font-size:36px;
-        }
     }
 
     p,ul,li,a{
-        font-size:15px;
-        line-height:1.4;
+        font-size:18px;
+        line-height:1.5;
     }
 
     .banner__text{

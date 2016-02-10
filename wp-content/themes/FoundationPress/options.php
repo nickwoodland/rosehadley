@@ -145,6 +145,15 @@ function optionsframework_options() {
 		'class' => 'mini',
 		'type' => 'text');
 
+	// Contact Telephone
+	$options[] = array(
+		'name' => __('Second Telephone', 'options_framework_theme'),
+		'desc' => __('Enter secondary telephone number. Used throughout the website.', 'options_framework_theme'),
+		'id' => 'secondary_contact_telephone',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
 	// Contact Email
 	$options[] = array(
 		'name' => __('Contact Email', 'options_framework_theme'),

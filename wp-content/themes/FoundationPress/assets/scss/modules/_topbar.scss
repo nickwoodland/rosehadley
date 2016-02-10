@@ -19,8 +19,11 @@
         a{
             font-size: rem-calc(20px);
             position:absolute;
-            bottom:0px;
+            bottom:2px;
             right:0px;
+        }
+        a:first-child {
+            bottom:28px;
         }
     }
 
