@@ -12,13 +12,13 @@ get_header(); ?>
 <?php $connected_form = get_post_meta($post->ID, '_rh_jobs_form_dropdown', true); ?>
 
 <div id="single-post" class="single-post--job" role="main">
-	<div class="banner banner--jobs" data-equalizer data-equalize-on="medium">
-		<div class="banner__flex-inner" data-equalizer-watch>
+	<div class="banner banner--jobs">
 			<div class="banner__content banner--light">
-				<h2>THE HAIR & BEAUTY RECRUITMENT AGENCY</h2>
-				<h3>FOR HAIR JOBS & BEAUTY JOBS LONDON</h3>
+				<div>
+					<h2>THE HAIR & BEAUTY RECRUITMENT AGENCY</h2>
+					<h3>FOR HAIR JOBS & BEAUTY JOBS LONDON</h3>
+				</div>
 			</div>
-		</div>
 	</div>
 	<?php do_action( 'foundationpress_before_content' ); ?>
 	<?php while ( have_posts() ) : the_post(); ?>

@@ -28,8 +28,11 @@
     }
 
     .banner__content{
-        width:90%;
+        width: auto;
         text-align: center;
+        left: 0px;
+        right: 0px;
+        justify-content: center;
     }
 }
 
@@ -80,12 +83,14 @@
         //margin-bottom: rem-calc(12px);
         margin-bottom:0px;
         font-weight:300;
+        line-height:0.8;
     }
 
     h3, .banner__heading--2{
         font-size:36px;
         margin-bottom: rem-calc(12px);
         font-weight:600;
+        line-height:0.8;
     }
 
     p,ul,li,a{

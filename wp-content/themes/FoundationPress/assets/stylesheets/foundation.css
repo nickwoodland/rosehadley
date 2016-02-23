@@ -5948,6 +5948,7 @@ table.hover tr:nth-of-type(even):hover {
     font-size: 1.25rem;
     position: absolute;
     bottom: 2px;
+    line-height: 1;
     right: 0px; }
   .top-bar .rightcol a:first-child {
     bottom: 28px; }
@@ -6073,8 +6074,13 @@ table.hover tr:nth-of-type(even):hover {
       height: 0px;
       padding-bottom: 30%; } }
   .banner.banner--jobs .banner__content {
-    width: 90%;
-    text-align: center; }
+    width: auto;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
 
 .banner__flex-inner {
   top: 0px;
@@ -6124,11 +6130,13 @@ table.hover tr:nth-of-type(even):hover {
   .banner__content h2, .banner__content .banner__heading--1 {
     font-size: 36px;
     margin-bottom: 0px;
-    font-weight: 300; }
+    font-weight: 300;
+    line-height: 0.8; }
   .banner__content h3, .banner__content .banner__heading--2 {
     font-size: 36px;
     margin-bottom: 0.75rem;
-    font-weight: 600; }
+    font-weight: 600;
+    line-height: 0.8; }
   .banner__content p, .banner__content ul, .banner__content li, .banner__content a {
     font-size: 18px;
     line-height: 1.5; }
