@@ -6153,7 +6153,7 @@ table.hover tr:nth-of-type(even):hover {
   position: relative;
   padding: 1rem 0px;
   border-bottom: 1px solid black; }
-  .main-content__subtitle h2 {
+  .main-content__subtitle h1, .main-content__subtitle h2 {
     font-size: 1.375rem;
     margin-bottom: 0px;
     text-align: center;

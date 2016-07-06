@@ -29,7 +29,7 @@ get_header(); ?>
 
 		<?php if($subtitle): ?>
 			<div class="main-content__subtitle">
-				<h2><?php echo $subtitle; ?></h2>
+				<h1><?php echo $subtitle; ?></h1>
 			</div>
 		<?php endif; ?>
 

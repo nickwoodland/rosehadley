@@ -24,7 +24,8 @@ get_header(); ?>
 
 	<div class="row">
 		<div class="columns small-12">
-			<h2 class="archive-title"><?php single_term_title(); ?> JOBS LONDON</h2>
+			<h1 class="archive-title"><?php single_term_title(); ?> JOBS LONDON</h1>
+            <?php echo term_description(); ?>
 		</div>
 	</div>
 
@@ -40,7 +41,7 @@ get_header(); ?>
 
 				<?php $i ++; ?>
 
-				<div class="columns large-4">
+				<div class="columns large-4 <?php echo($i == $total_count ? 'end' : ''); ?>">
 	                <?php include(locate_template('parts/job-listing.php')); ?>
 	            </div>
 
